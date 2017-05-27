@@ -14,19 +14,19 @@ app.set('port', process.env.PORT || 3000);
 
 // app.set('appData', dataFile);
 app.set('view engine', 'pug');
-app.set('views', 'app/views');
+app.set('views', 'views');
 
 //basic static route
 app.use(express.static(path.join(__dirname, 'public')));
-console.log((path.resolve(__dirname)));
+// console.log((path.resolve(__dirname)));
 //route for /items/:id/
 app.use('/items', express.static(path.join(__dirname, 'public')));
 //route for admin
-// app.use('/admin', express.static(path.join(__dirname, 'public')));
+app.use('/admin', express.static(path.join(__dirname, 'public')));
 //route for edit
 app.use('/admin/edit', express.static(path.join(__dirname, 'public')));
 //route for delete
-// app.use('/admin/delete/:id', express.static(path.join(__dirname, 'public')));
+app.use('/admin/delete/:id', express.static(path.join(__dirname, 'public')));
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
