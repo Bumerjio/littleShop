@@ -1,0 +1,57 @@
+section.itemOptions
+  .itemOptions-wrapper
+    .itemOption-photo.my-gallery
+      .itemOption-photo--main
+        figure(class="figGallery")
+          a(href='images/Details/detailMain.jpg', data-size='900x1400', data-index="1")
+            img(src='images/Details/detailMain.jpg', alt='Image description')
+      .itemOption-photo--smallPhoto
+        figure(class="figGallery")
+          a(href='images/Details/detailMain.jpg', data-size='900x1400', data-index="2")
+            img(src='images/Details/detailMain.jpg', alt='Image description')
+        figure(class="figGallery")
+          a(href='images/Details/detailMain.jpg', data-size='900x1400', data-index="3")
+            img(src='images/Details/detailMain.jpg', alt='Image description')
+        figure(class="figGallery")
+          a(href='images/Details/detailMain.jpg', data-size='900x1400', data-index="4")
+            img(src='images/Details/detailMain.jpg', alt='Image description')
+
+    .itemOption-detail
+      .itemOption-detail--text
+        each item in itemsProperty
+          h2 Описание
+          p #{item.description}
+
+      .divideLine
+      .itemOptions-price
+        each item in itemsProperty
+          span #{item.name_dress} 
+          p Цена: #{item.price} грн
+          p Артикул: #{item.article} 
+        
+        
+        
+.pswp(tabindex='-1', role='dialog', aria-hidden='true')
+  .pswp__bg
+  .pswp__scroll-wrap
+    .pswp__container
+      .pswp__item
+      .pswp__item
+      .pswp__item
+    .pswp__ui.pswp__ui--hidden
+      .pswp__top-bar
+        .pswp__counter
+        button.pswp__button.pswp__button--close(title='Close')
+        //- button.pswp__button.pswp__button--share(title='Share')
+        //- button.pswp__button.pswp__button--fs(title='Toggle fullscreen')
+        //- button.pswp__button.pswp__button--zoom(title='Zoom in/out')
+        .pswp__preloader
+          .pswp__preloader__icn
+            .pswp__preloader__cut
+              .pswp__preloader__donut
+      .pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+        .pswp__share-tooltip
+      button.pswp__button.pswp__button--arrow--left(title='Previous (arrow left)')
+      button.pswp__button.pswp__button--arrow--right(title='Next (arrow right)')
+      .pswp__caption
+        .pswp__caption__center
