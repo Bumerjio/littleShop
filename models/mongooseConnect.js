@@ -5,7 +5,8 @@ const Logger = require('mongodb').Logger;
 
 mongoose.Promise = global.Promise;
 
-const url = 'mongodb://localhost:27017/shopitem';
+// const url = 'mongodb://localhost:27017/shopitem';
+const url = 'mongodb://admin:admin147896325@ds155411.mlab.com:55411/shopitem'
 let connect = MongoClient.connect(url);
 mongoose.connect(url);
 
